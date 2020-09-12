@@ -1,12 +1,12 @@
 # cgorillas
 A copy of microsoft's qbasic [gorillas.bas](https://en.wikipedia.org/wiki/Gorillas_(video_game)) written in C.
 
-At the moment it only draws the cityscape, not functional
+At the moment it only allows one shot, still not functional as it doesn't have turns or scores.
 
-## Installation
+## Compilation
 
 Requires `libgraph`.
 
-Compile by running `g++ gorillas-landscape.c -o gorillas-landscape -lgraph;`
+Compile by running `g++ gorillas.c -o gorillas -lgraph;`
 
-Then simply run `./gorillas-landscape`
+Then simply run `./gorillas`
