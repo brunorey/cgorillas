@@ -16,7 +16,7 @@ Then simply run `./gorillas`
 ## Why redo this game?
 
 There's many reasons. None of them in particular defines the choice.
- - This is one of the first games I remember playing as a kid (along with simcity 1, paperboy, accolade F1 and others). My father was learning QBasic at the time and would tune the game for us.
+ - This is one of the first games I remember playing as a kid (along with simcity 1, paperboy, accolade F1 and others). My father was learning QBasic at the time and would tune the game for us adding things that were attractive to kids like bigger explosions.
  - Software development and coding standards have changed a lot in 30 years and it's fun to study old code and find the differences.
  - Back in the day graphics programming was done in a very artisanal manner (I tried to maintain some of that by using libgraph: turboc graphs ported to linux)
  - I found many many ports of this game but didn't find any one in C or C++.
@@ -29,6 +29,7 @@ At the moment it only allows one shot, still not functional as it doesn't have t
 As this is just a hoccy, I'll be improving it as I find the time and motivation (also, there's a considerable chance this will be abandoned at some point).
 
 ### TO-DOs
+ - Animate gorillas
  - Turns
  - Option to do multiple games ("best of three")
  - Draw the sun (with faces and reactions, like the original)
