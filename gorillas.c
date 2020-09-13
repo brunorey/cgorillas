@@ -175,6 +175,30 @@ int draw_buildings()
 	return num_of_buildings;
 }
 
+bool explosion_kills_gorilla(int x, int y)
+{
+	//this calculates a square area of impact at the moment.
+	//it should be a circle with the radius of explosion
+	//to find whether a point in this loop is in the circle or not,
+	//calculate the distance from point to center of circle. if distance
+	//is lesser than radius, then point is within circle.
+	//lots of pithagoras involved in the process mentioned above
+	int maxx=x+40, maxy=y+40;
+	for(x; x<maxx;x++)
+	{
+		for(y;y<maxy;y++)
+		{
+			if(getpixel(x,y)==BROWN)
+				return true;
+			//here do another check. if pixel is brown,
+			//then check if it's within circle.
+			//if it's brown && within circle, ret true.
+			//order matters.
+		}
+	}
+	return false;
+}
+
 bool has_impact(int left, int top, int spin=0)
 {
 	int minx=0, miny=0, maxx=0, maxy=0;
@@ -329,6 +353,10 @@ int throw_banana(int x, int y, float speed, float angle)
 	if(impact)
 	{
 		draw_explosion(x, y);
+		if(explosion_kills_gorilla(x,y))
+		{
+			printf("KILLED\n");
+		}
 	}
 	else
 	{
