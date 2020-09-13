@@ -178,7 +178,10 @@ int draw_buildings()
 bool has_impact(int left, int top, int spin=0)
 {
 	int minx=0, miny=0, maxx=0, maxy=0;
-	
+	if(top<0)
+	{
+		return false;
+	}
 	switch(spin){
 		case 0:
 			minx= 4, miny=15,maxx=17, maxy=21;
@@ -206,6 +209,18 @@ bool has_impact(int left, int top, int spin=0)
 
 int draw_banana(int x=200, int y=80, int spin=0)
 {
+	if(y<0)
+	{
+		if(x>0 && x+20<getmaxx())
+		{
+			setcolor(YELLOW);
+			pieslice(x+20,1,70,110,5);
+			delay(200);
+			setcolor(BLUE);
+			pieslice(x+20,1,70,110,5);
+		}
+		return 0;
+	}
 	switch(spin)
 	{
 		case 0: // u
@@ -288,6 +303,8 @@ int draw_explosion(int x, int y)
 	setcolor(WHITE);
 	pieslice(x,y,0,360,2);
 	delay(1000);
+	setcolor(BLUE);
+	pieslice(x,y,0,360,18);
 	return 0;
 }
 
@@ -299,7 +316,7 @@ int throw_banana(int x, int y, float speed, float angle)
 	float speed_y = (speed*sin(radians));
 	bool impact=false;
 	bool out_of_screen=false;
-	while(!(impact=has_impact(x,y,s)) && !(out_of_screen=(x>=getmaxx()) || (y>=getmaxy())))
+	while(!(out_of_screen=(x>=getmaxx()||x<0) || (y>=getmaxy())) && !(impact=has_impact(x,y,s)))
 	{
 		draw_banana(x,y,s);
 		x+=speed_x;
@@ -345,7 +362,7 @@ int main()
 	speed_str[2]=0;
 	float angle = atoi(angle_str);
 	float speed = atoi(speed_str);
-	throw_banana(l_gor_x+20, l_gor_y-(42+21), speed, angle);
+	throw_banana(l_gor_x, l_gor_y-(42+21), speed, angle);
 	return 0;
 }
 
