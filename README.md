@@ -31,6 +31,7 @@ As this is just a hoccy, I'll be improving it as I find the time and motivation 
 ### TO-DOs
  - Animate gorillas
  - Turns
+ - Wind
  - Option to do multiple games ("best of three")
  - Draw the sun (with faces and reactions, like the original)
  - Two-player or single-player (and a rudimentary AI for single player)
