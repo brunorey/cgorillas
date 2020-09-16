@@ -7,7 +7,7 @@ This clone was done as a hobby project. It's been some time since I coded anythi
 
 Requires `libgraph`.
 
-Compile by running `g++ gorillas.c -o gorillas -lgraph;`
+Compile by running `make`
 
 Then simply run `./gorillas`
 
@@ -26,7 +26,7 @@ This was recently started and I just wanted to get something functional fast. Th
 
 At the moment it only allows one shot, still not functional as it doesn't have turns or scores.
 
-As this is just a hoccy, I'll be improving it as I find the time and motivation (also, there's a considerable chance this will be abandoned at some point).
+As this is just a hobby, I'll be improving it as I find the time and motivation (also, there's a considerable chance this will be abandoned at some point).
 
 ### TO-DOs
  - Animate gorillas
@@ -36,5 +36,5 @@ As this is just a hoccy, I'll be improving it as I find the time and motivation 
  - Draw the sun (with faces and reactions, like the original)
  - Two-player or single-player (and a rudimentary AI for single player)
  - CODE CLEANUP
- - Maybe move to C++?
+ - Maybe move to C++? (instead of plain C)
  - Better support for compilation and packaging
