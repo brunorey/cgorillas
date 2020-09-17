@@ -1,6 +1,7 @@
 #ifndef __cgorillas_aux__
 #define __cgorillas_aux__ 1
 
+#include "aux.h"
 #include <graphics.h>
 
 float myrand(float min, float max)

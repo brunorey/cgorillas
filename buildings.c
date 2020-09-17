@@ -1,9 +1,9 @@
 #ifndef __cgorillas_buildings__
 #define __cgorillas_buildings__ 1
 
-#include <graphics.h>
 #include "buildings.h"
 #include "aux.h"
+#include <graphics.h>
 
 
 int get_building_color()

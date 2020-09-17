@@ -1,12 +1,12 @@
 #ifndef __cgorillas_landscape__
 #define __cgorillas_landscape__ 1
 
-#include <graphics.h>
-#include <math.h>
 #include "landscape.h"
 #include "gorillas.h"
 #include "buildings.h"
 #include "aux.h"
+#include <graphics.h>
+#include <math.h>
 
 extern int l_gor_x;
 extern int l_gor_y;

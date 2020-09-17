@@ -1,11 +1,11 @@
 #ifndef __cgorillas_banana__
 #define __cgorillas_banana__ 1
 
+#include "banana.h"
+#include "landscape.h"
 #include <math.h>
 #include <stdio.h>
 #include <graphics.h>
-#include "banana.h"
-#include "landscape.h"
 
 extern float wind;
 

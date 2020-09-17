@@ -1,13 +1,13 @@
 #define _USE_MATH_DEFINES
 
-#include <stdio.h>
-#include <graphics.h>
-#include <math.h>
-#include "landscape.h"
 #include "gorillas.h"
+#include "landscape.h"
 #include "buildings.h"
 #include "banana.h"
 #include "aux.h"
+#include <stdio.h>
+#include <graphics.h>
+#include <math.h>
 
 //these global variables should not be global
 //  and should be put into a nice struct
