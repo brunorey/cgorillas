@@ -9,8 +9,26 @@
 #include "banana.h"
 #include "aux.h"
 
+//these global variables should not be global
+//  and should be put into a nice struct
+//  landscape {
+//    wind
+//    left_gorilla {
+//      x_coord
+//      y_coord
+//    }
+//    right_gorilla {
+//      x_coord
+//      y_coord
+//    }
+//    buildings {
+//      [...]
+//    }
+//  }
+
 int l_gor_x = 0;
 int l_gor_y = 0;
+float wind = 0;
 
 int main()
 {
@@ -23,6 +41,7 @@ int main()
 	sleep(2);
 	char angle_str[3];
 	char speed_str[3];
+	printf("Wind: %f", wind);
 	printf("\nAngle:");
 	angle_str[0]=getch();
 	printf("%c", angle_str[0]);
@@ -37,7 +56,7 @@ int main()
 	speed_str[2]=0;
 	float angle = atoi(angle_str);
 	float speed = atoi(speed_str);
-	throw_banana(l_gor_x+(WIDTH_OF_GORILLA/2), l_gor_y-(HEIGHT_OF_GORILLA), speed, angle);
+	throw_banana(l_gor_x-(WIDTH_OF_GORILLA/2), l_gor_y-(HEIGHT_OF_GORILLA+20), speed, angle);
 	return 0;
 }
 

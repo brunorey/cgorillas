@@ -9,7 +9,7 @@ all: cgorillas
 cgorillas: cgorillas.c banana.o buildings.o gorillas.o landscape.o aux.o
 	$(CC) $(CFLAGS) -o cgorillas cgorillas.c banana.o buildings.o gorillas.o landscape.o aux.o -lgraph -lm
 
-banana.o: banana.c banana.h
+banana.o: banana.c banana.h landscape.h
 	$(CC) $(CFLAGS) -c banana.c
 
 buildings.o: buildings.c buildings.h aux.h

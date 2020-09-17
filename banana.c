@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <graphics.h>
 #include "banana.h"
+#include "landscape.h"
+
+extern float wind;
 
 int explosion_kills_gorilla(int x, int y)
 {
@@ -57,7 +60,7 @@ int has_impact(int left, int top, int spin)
 	{
 		for(int y=top+miny;y<(top+maxy);y++)
 		{
-			if(getpixel(x,y)!=BLUE)
+			if(getpixel(x,y)!=BLUE && (x>100 || y>40))
 				return 1;
 		}
 	}
@@ -184,6 +187,14 @@ int throw_banana(int x, int y, float speed, float angle)
 		if(s==4)
 			s=0;
 		speed_y-=GRAVITY;
+		if(wind > 0 && speed_x < MAX_WIND_DRAG)
+		{
+			speed_x += (MAX_WIND_DRAG-speed_x)*wind;
+		}
+		if(wind < 0 && speed_x > -MAX_WIND_DRAG)
+		{
+			speed_x += (MAX_WIND_DRAG+speed_x)*wind;
+		}
 	}
 	if(impact)
 	{

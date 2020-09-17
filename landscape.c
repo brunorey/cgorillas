@@ -10,13 +10,14 @@
 
 extern int l_gor_x;
 extern int l_gor_y;
+extern float wind;
 
 int draw_landscape()
 {
 	int current_x = -1;
 	int width_of_building = 0;
 	int height_of_building = 0;
-	int max_height_of_building=(getmaxy()*8)/10;
+	int max_height_of_building=(getmaxy()*MAX_HEIGHT_OF_BUILDING_PCT)/100;
 	int num_of_buildings=0;
 	int last_x=0,last_width=0,last_height=0;
 	while(current_x < getmaxx())
@@ -26,7 +27,7 @@ int draw_landscape()
 		last_height=height_of_building;
 		num_of_buildings++;
 		width_of_building = myrand(MIN_WIDTH_OF_BUILDING, MAX_WIDTH_OF_BUILDING);
-		height_of_building = getmaxy()-(max_height_of_building*myrand(2,10))/10;
+		height_of_building = getmaxy()-(max_height_of_building*myrand(MIN_HEIGHT_OF_BUILDING_PCT,100))/100;
 		if(current_x+width_of_building+MIN_WIDTH_OF_BUILDING > getmaxx())
 		{
 			width_of_building += MIN_WIDTH_OF_BUILDING;
@@ -45,6 +46,7 @@ int draw_landscape()
 		current_x += width_of_building;
 	}
 	draw_gorilla(last_x+(last_width/2),last_height);
+	wind = myrand(MIN_WIND, MAX_WIND);
 	return num_of_buildings;
 }
 

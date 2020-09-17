@@ -1,4 +1,9 @@
 #define MIN_WIDTH_OF_BUILDING 36
 #define MAX_WIDTH_OF_BUILDING 90
+#define MIN_HEIGHT_OF_BUILDING_PCT 20
+#define MAX_HEIGHT_OF_BUILDING_PCT 80
+#define MIN_WIND -0.1
+#define MAX_WIND  0.1
+#define MAX_WIND_DRAG 10
 
 int draw_landscape();

@@ -36,5 +36,8 @@ As this is just a hobby, I'll be improving it as I find the time and motivation 
  - Draw the sun (with faces and reactions, like the original)
  - Two-player or single-player (and a rudimentary AI for single player)
  - CODE CLEANUP
+ - Add tests
  - Maybe move to C++? (instead of plain C)
- - Better support for compilation and packaging
+ - Better support for compilation (libgraph dependency, mostly)
+ - Makefile autogeneration (automake, makefile...)
+ - Packaging (build .deb)

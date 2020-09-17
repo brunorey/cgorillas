@@ -1,1 +1,1 @@
-float myrand(int min, int max);
+float myrand(float min, float max);
